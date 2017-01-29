@@ -1,0 +1,39 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Idea
+.idea
+*.iml
+*.iws
+*.ipr
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Maven
+target
+
+# Build
+out
+build
+bin
+
+# Other
+*.log
+*.swp
+*.bak
+local.properties
