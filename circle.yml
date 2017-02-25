@@ -1,0 +1,18 @@
+machine:
+  environment:
+    QEMU_AUDIO_DRV: none
+
+test:
+  pre:
+    - emulator -avd circleci-android24 -no-window:
+        background: true
+        parallel: true
+    - circle-android wait-for-boot
+  override:
+    - ./gradlew test
+    - ./gradlew connectedAndroidTest
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+    - cp -r app/build/reports/tests/ $CIRCLE_TEST_REPORTS/junit/
+    - cp -r app/build/reports/androidTests/connected/ $CIRCLE_TEST_REPORTS/junit/
