@@ -1,4 +1,4 @@
-package com.martymarron.dummy;
+package com.martymarron.traveldiary.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

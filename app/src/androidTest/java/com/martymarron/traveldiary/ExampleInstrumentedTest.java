@@ -1,4 +1,4 @@
-package com.martymarron.traveldiaryandroid;
+package com.martymarron.traveldiary;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

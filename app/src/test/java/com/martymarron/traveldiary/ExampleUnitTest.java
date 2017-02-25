@@ -1,4 +1,4 @@
-package com.martymarron.traveldiaryandroid;
+package com.martymarron.traveldiary;
 
 import org.junit.Test;
 
