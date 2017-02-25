@@ -9,11 +9,10 @@ test:
         parallel: true
     - circle-android wait-for-boot
   override:
+    - ./gradlew test
     - ./gradlew connectedAndroidTest
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - cp app/build/outputs/reports/androidTests/connected/ $CIRCLE_TEST_REPORTS/junit/
-  # post:
-  #   - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-  #   - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-  #   - cp -r app/build/reports/tests/ $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+    - cp -r app/build/reports/tests/ $CIRCLE_TEST_REPORTS/junit/
+    - cp -r app/build/reports/androidTests/connected/ $CIRCLE_TEST_REPORTS/junit/
