@@ -4,4 +4,6 @@
     <string name="title_item_detail">Item Detail</string>
     <string name="title_savedata_list">Savedatas</string>
     <string name="title_savedata_detail">Savedata Detail</string>
+    <string name="title_userstory_list">UserStories</string>
+    <string name="title_userstory_detail">UserStory Detail</string>
 </resources>
