@@ -14,6 +14,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -25,6 +26,19 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.martymarron.traveldiary.SavedataListActivity" />
+        </activity>
+        <activity
+            android:name=".UserStoryListActivity"
+            android:label="@string/title_userstory_list"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".UserStoryDetailActivity"
+            android:label="@string/title_userstory_detail"
+            android:parentActivityName=".UserStoryListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.martymarron.traveldiary.UserStoryListActivity" />
         </activity>
     </application>
 
